@@ -19,7 +19,7 @@ public class BaseController {
     @Resource
     protected IndexService indexService;
     @Resource
-    protected TaskService orderService;
+    protected TaskService taskService;
     @Resource
     protected UserService userService;
     @Resource
