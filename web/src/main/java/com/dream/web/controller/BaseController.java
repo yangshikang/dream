@@ -1,5 +1,9 @@
 package com.dream.web.controller;
 
+import com.dream.service.IndexService;
+import com.dream.service.OrderService;
+import com.dream.service.UserService;
+import com.dream.service.WithdrawService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,5 +16,13 @@ public class BaseController {
     @Resource
     protected HttpServletRequest request;
 
+    @Resource
+    protected IndexService indexService;
+    @Resource
+    protected OrderService orderService;
+    @Resource
+    protected UserService userService;
+    @Resource
+    protected WithdrawService withdrawService;
 
 }

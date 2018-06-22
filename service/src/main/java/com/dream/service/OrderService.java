@@ -30,7 +30,7 @@ public interface OrderService {
      * @param userId
      * @return
      */
-    Response<Order> getByUserId(int userId);
+    Response<List<Order>> getByUserId(int userId);
 
 
     /**

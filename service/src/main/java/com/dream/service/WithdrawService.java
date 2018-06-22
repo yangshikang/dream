@@ -33,7 +33,7 @@ public interface WithdrawService {
      * @param userId
      * @return
      */
-    Response<Withdraw> getByUserId(int userId);
+    Response<List<Withdraw>> getByUserId(int userId);
 
     /**
      * 增加用户

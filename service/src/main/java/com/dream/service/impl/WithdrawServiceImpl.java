@@ -29,11 +29,11 @@ public class WithdrawServiceImpl extends BaseService implements WithdrawService 
     }
 
     @Override
-    public Response<Withdraw> getByUserId(int userId) {
+    public Response<List<Withdraw>> getByUserId(int userId) {
         Withdraw withdraw = new Withdraw();
         withdraw.setUserId(userId);
-        withdraw = withdrawMapper.selectOne(withdraw);
-        return Response.success(withdraw);
+        List<Withdraw> withdrawList = withdrawMapper.select(withdraw);
+        return Response.success(withdrawList);
     }
 
     @Override

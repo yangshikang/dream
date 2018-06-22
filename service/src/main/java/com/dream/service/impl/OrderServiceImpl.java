@@ -30,12 +30,12 @@ public class OrderServiceImpl extends BaseService implements OrderService {
     }
 
     @Override
-    public Response<Order> getByUserId(int userId) {
+    public Response<List<Order>> getByUserId(int userId) {
 
         Order order = new Order();
         order.setUserId(userId);
-        order = orderMapper.selectOne(order);
-        return Response.success(order);
+        List<Order> orderList = orderMapper.select(order);
+        return Response.success(orderList);
     }
 
     @Override
