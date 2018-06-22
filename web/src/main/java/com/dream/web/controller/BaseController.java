@@ -1,7 +1,7 @@
 package com.dream.web.controller;
 
 import com.dream.service.IndexService;
-import com.dream.service.OrderService;
+import com.dream.service.TaskService;
 import com.dream.service.UserService;
 import com.dream.service.WithdrawService;
 import org.slf4j.Logger;
@@ -19,7 +19,7 @@ public class BaseController {
     @Resource
     protected IndexService indexService;
     @Resource
-    protected OrderService orderService;
+    protected TaskService orderService;
     @Resource
     protected UserService userService;
     @Resource

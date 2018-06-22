@@ -1,6 +1,6 @@
 package com.dream.service.impl;
 
-import com.dream.dao.mapper.OrderMapper;
+import com.dream.dao.mapper.TaskMapper;
 import com.dream.dao.mapper.UserMapper;
 import com.dream.dao.mapper.WithdrawMapper;
 import org.slf4j.Logger;
@@ -17,7 +17,7 @@ public class BaseService {
     @Resource
     protected UserMapper userMapper;
     @Resource
-    protected OrderMapper orderMapper;
+    protected TaskMapper taskMapper;
     @Resource
     protected WithdrawMapper withdrawMapper;
 }

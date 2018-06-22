@@ -1,6 +1,6 @@
 package com.dream.web.controller;
 
-import com.dream.dao.domain.Order;
+import com.dream.dao.domain.Task;
 import com.dream.dao.domain.User;
 import com.dream.dao.domain.Withdraw;
 import com.dream.dao.utils.Response;
@@ -17,16 +17,16 @@ import java.util.List;
  * 任务大厅
  */
 @Controller
-@RequestMapping(value = "order")
-public class OrderController extends BaseController {
+@RequestMapping(value = "/task")
+public class TaskController extends BaseController {
 
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(HttpServletRequest request) {
 
-        Response<List<Order>> orders = orderService.list();
-        request.setAttribute("orders", orders);
-        return "/order/index";
+        Response<List<Task>> tasks = orderService.list();
+        request.setAttribute("tasks", tasks);
+        return "/task";
     }
 
     @RequestMapping(value = "/getByUserId", method = RequestMethod.POST)
@@ -34,7 +34,7 @@ public class OrderController extends BaseController {
     public Response getByUserId(HttpServletRequest request) {
         User user = (User) request.getAttribute("user_");
 
-        Response<List<Order>> orderList = orderService.getByUserId(user.getId());
+        Response<List<Task>> orderList = orderService.getByUserId(user.getId());
         return orderList;
     }
 

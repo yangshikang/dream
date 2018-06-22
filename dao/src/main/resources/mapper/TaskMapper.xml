@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.dream.dao.mapper.OrderMapper" >
-  <resultMap id="BaseResultMap" type="com.dream.dao.domain.Order" >
+<mapper namespace="com.dream.dao.mapper.TaskMapper" >
+  <resultMap id="BaseResultMap" type="com.dream.dao.domain.Task" >
     <!--
       WARNING - @mbg.generated
     -->

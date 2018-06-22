@@ -1,6 +1,6 @@
 package com.dream.service;
 
-import com.dream.dao.domain.Order;
+import com.dream.dao.domain.Task;
 import com.dream.dao.utils.Response;
 
 import java.util.List;
@@ -8,21 +8,21 @@ import java.util.List;
 /**
  * Created by yangshikang on 22/06/2018.
  */
-public interface OrderService {
+public interface TaskService {
 
 
     /**
      *  查询所有订单
      * @return
      */
-    Response<List<Order>> list();
+    Response<List<Task>> list();
 
     /**
      * 根据订单id查询
      * @param id
      * @return
      */
-    Response<Order> getById(int id);
+    Response<Task> getById(int id);
 
 
     /**
@@ -30,18 +30,18 @@ public interface OrderService {
      * @param userId
      * @return
      */
-    Response<List<Order>> getByUserId(int userId);
+    Response<List<Task>> getByUserId(int userId);
 
 
     /**
      *  增加订单信息
-     * @param order
+     * @param task
      */
-    void insert(Order order);
+    void insert(Task task);
 
     /**
      *  更新订单信息
-     * @param order
+     * @param task
      */
-    void update(Order order);
+    void update(Task task);
 }

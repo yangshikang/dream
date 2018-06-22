@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
-public class Order {
+public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -145,17 +145,25 @@ public class Order {
         this.category = category;
     }
 
-
+    /**
+     * 获取支付方式
+     *
+     * @return payment_method - 支付方式
+     */
     public String getPaymentMethod() {
         return paymentMethod;
     }
 
+    /**
+     * 设置支付方式
+     *
+     * @param paymentMethod 支付方式
+     */
     public void setPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
 
     /**
-
      * 获取搜索方式
      *
      * @return search_method - 搜索方式
