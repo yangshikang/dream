@@ -1,9 +1,30 @@
 package com.dream.service;
 
-import java.util.List;
+
+import com.dream.dao.utils.Response;
 
 public interface IndexService {
 
+    /**
+     * 登录
+     *
+     * @param loginName
+     * @param password
+     * @return
+     */
+    Response login(String loginName, String password);
 
-    List<String> get();
+
+    /**
+     * 注册
+     *
+     * @param name
+     * @param phone
+     * @param qq
+     * @param password
+     * @return
+     */
+    Response register(String name, String phone, String qq, String password);
+
+
 }

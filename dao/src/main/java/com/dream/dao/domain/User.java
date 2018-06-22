@@ -1,330 +1,424 @@
 package com.dream.dao.domain;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(name = "DTYPE")
-    private String dtype;
-
-    @Column(name = "create_date_time")
-    private Date createDateTime;
-
-    private String gender;
-
-    @Column(name = "last_edit_date_time")
-    private Date lastEditDateTime;
-
-    @Column(name = "last_login_date_time")
-    private Date lastLoginDateTime;
-
-    private String name;
-
-    private String password;
-
-    @Column(name = "register_date_time")
-    private Date registerDateTime;
-
-    private String roles;
-
-    private String status;
-
-    private String token;
-
-    private String username;
-
-    @Column(name = "creater_id")
-    private Long createrId;
-
-    @Column(name = "last_editor_id")
-    private Long lastEditorId;
-
-    @Column(name = "init_password")
-    private String initPassword;
-
-    @Column(name = "account_type")
-    private String accountType;
+    private Integer id;
 
     /**
-     * 是否第一次登录
+     * 名称
      */
-    @Column(name = "isFirstLogin")
-    private String isfirstlogin;
+    private String name;
 
-    @Column(name = "username_skey")
-    private String usernameSkey;
+    /**
+     * 手机号
+     */
+    private String phone;
+
+    /**
+     * QQ号
+     */
+    @Column(name = "QQ")
+    private String qq;
+
+    /**
+     * 密码
+     */
+    private String password;
+
+    /**
+     * 真实姓名
+     */
+    @Column(name = "real_name")
+    private String realName;
+
+    /**
+     * 头像
+     */
+    private String avatar;
+
+    /**
+     * 邮箱
+     */
+    private String email;
+
+    /**
+     * 性别
+     */
+    private String gender;
+
+    /**
+     * 安全码
+     */
+    @Column(name = "security_code")
+    private String securityCode;
+
+    /**
+     * 支付宝支付
+     */
+    @Column(name = "ali_pay")
+    private String aliPay;
+
+    /**
+     * 微信支付
+     */
+    @Column(name = "we_chat")
+    private String weChat;
+
+    /**
+     * 银行支付
+     */
+    private String bank;
+
+    /**
+     * 金额
+     */
+    private BigDecimal balance;
+
+    /**
+     * 状态
+     */
+    private Integer status;
+
+    /**
+     * 创建时间
+     */
+    @Column(name = "create_time")
+    private Date createTime;
+
+    /**
+     * 淘宝账号
+     */
+    @Column(name = "t_name")
+    private String tName;
+
+    /**
+     * 京东账号
+     */
+    @Column(name = "j_name")
+    private String jName;
 
     /**
      * @return id
      */
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     * @return DTYPE
-     */
-    public String getDtype() {
-        return dtype;
-    }
-
-    /**
-     * @param dtype
-     */
-    public void setDtype(String dtype) {
-        this.dtype = dtype;
-    }
-
-    /**
-     * @return create_date_time
-     */
-    public Date getCreateDateTime() {
-        return createDateTime;
-    }
-
-    /**
-     * @param createDateTime
-     */
-    public void setCreateDateTime(Date createDateTime) {
-        this.createDateTime = createDateTime;
-    }
-
-    /**
-     * @return gender
-     */
-    public String getGender() {
-        return gender;
-    }
-
-    /**
-     * @param gender
-     */
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    /**
-     * @return last_edit_date_time
-     */
-    public Date getLastEditDateTime() {
-        return lastEditDateTime;
-    }
-
-    /**
-     * @param lastEditDateTime
-     */
-    public void setLastEditDateTime(Date lastEditDateTime) {
-        this.lastEditDateTime = lastEditDateTime;
-    }
-
-    /**
-     * @return last_login_date_time
-     */
-    public Date getLastLoginDateTime() {
-        return lastLoginDateTime;
-    }
-
-    /**
-     * @param lastLoginDateTime
-     */
-    public void setLastLoginDateTime(Date lastLoginDateTime) {
-        this.lastLoginDateTime = lastLoginDateTime;
-    }
-
-    /**
-     * @return name
+     * 获取名称
+     *
+     * @return name - 名称
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @param name
+     * 设置名称
+     *
+     * @param name 名称
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * @return password
+     * 获取手机号
+     *
+     * @return phone - 手机号
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * 设置手机号
+     *
+     * @param phone 手机号
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    /**
+     * 获取QQ号
+     *
+     * @return QQ - QQ号
+     */
+    public String getQq() {
+        return qq;
+    }
+
+    /**
+     * 设置QQ号
+     *
+     * @param qq QQ号
+     */
+    public void setQq(String qq) {
+        this.qq = qq;
+    }
+
+    /**
+     * 获取密码
+     *
+     * @return password - 密码
      */
     public String getPassword() {
         return password;
     }
 
     /**
-     * @param password
+     * 设置密码
+     *
+     * @param password 密码
      */
     public void setPassword(String password) {
         this.password = password;
     }
 
     /**
-     * @return register_date_time
+     * 获取真实姓名
+     *
+     * @return real_name - 真实姓名
      */
-    public Date getRegisterDateTime() {
-        return registerDateTime;
+    public String getRealName() {
+        return realName;
     }
 
     /**
-     * @param registerDateTime
+     * 设置真实姓名
+     *
+     * @param realName 真实姓名
      */
-    public void setRegisterDateTime(Date registerDateTime) {
-        this.registerDateTime = registerDateTime;
+    public void setRealName(String realName) {
+        this.realName = realName;
     }
 
     /**
-     * @return roles
+     * 获取头像
+     *
+     * @return avatar - 头像
      */
-    public String getRoles() {
-        return roles;
+    public String getAvatar() {
+        return avatar;
     }
 
     /**
-     * @param roles
+     * 设置头像
+     *
+     * @param avatar 头像
      */
-    public void setRoles(String roles) {
-        this.roles = roles;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     /**
-     * @return status
+     * 获取邮箱
+     *
+     * @return email - 邮箱
      */
-    public String getStatus() {
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * 设置邮箱
+     *
+     * @param email 邮箱
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * 获取性别
+     *
+     * @return gender - 性别
+     */
+    public String getGender() {
+        return gender;
+    }
+
+    /**
+     * 设置性别
+     *
+     * @param gender 性别
+     */
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    /**
+     * 获取安全码
+     *
+     * @return security_code - 安全码
+     */
+    public String getSecurityCode() {
+        return securityCode;
+    }
+
+    /**
+     * 设置安全码
+     *
+     * @param securityCode 安全码
+     */
+    public void setSecurityCode(String securityCode) {
+        this.securityCode = securityCode;
+    }
+
+    /**
+     * 获取支付宝支付
+     *
+     * @return ali_pay - 支付宝支付
+     */
+    public String getAliPay() {
+        return aliPay;
+    }
+
+    /**
+     * 设置支付宝支付
+     *
+     * @param aliPay 支付宝支付
+     */
+    public void setAliPay(String aliPay) {
+        this.aliPay = aliPay;
+    }
+
+    /**
+     * 获取微信支付
+     *
+     * @return we_chat - 微信支付
+     */
+    public String getWeChat() {
+        return weChat;
+    }
+
+    /**
+     * 设置微信支付
+     *
+     * @param weChat 微信支付
+     */
+    public void setWeChat(String weChat) {
+        this.weChat = weChat;
+    }
+
+    /**
+     * 获取银行支付
+     *
+     * @return bank - 银行支付
+     */
+    public String getBank() {
+        return bank;
+    }
+
+    /**
+     * 设置银行支付
+     *
+     * @param bank 银行支付
+     */
+    public void setBank(String bank) {
+        this.bank = bank;
+    }
+
+    /**
+     * 获取金额
+     *
+     * @return balance - 金额
+     */
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    /**
+     * 设置金额
+     *
+     * @param balance 金额
+     */
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+
+    /**
+     * 获取状态
+     *
+     * @return status - 状态
+     */
+    public Integer getStatus() {
         return status;
     }
 
     /**
-     * @param status
+     * 设置状态
+     *
+     * @param status 状态
      */
-    public void setStatus(String status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
     /**
-     * @return token
-     */
-    public String getToken() {
-        return token;
-    }
-
-    /**
-     * @param token
-     */
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    /**
-     * @return username
-     */
-    public String getUsername() {
-        return username;
-    }
-
-    /**
-     * @param username
-     */
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    /**
-     * @return creater_id
-     */
-    public Long getCreaterId() {
-        return createrId;
-    }
-
-    /**
-     * @param createrId
-     */
-    public void setCreaterId(Long createrId) {
-        this.createrId = createrId;
-    }
-
-    /**
-     * @return last_editor_id
-     */
-    public Long getLastEditorId() {
-        return lastEditorId;
-    }
-
-    /**
-     * @param lastEditorId
-     */
-    public void setLastEditorId(Long lastEditorId) {
-        this.lastEditorId = lastEditorId;
-    }
-
-    /**
-     * @return init_password
-     */
-    public String getInitPassword() {
-        return initPassword;
-    }
-
-    /**
-     * @param initPassword
-     */
-    public void setInitPassword(String initPassword) {
-        this.initPassword = initPassword;
-    }
-
-    /**
-     * @return account_type
-     */
-    public String getAccountType() {
-        return accountType;
-    }
-
-    /**
-     * @param accountType
-     */
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
-    }
-
-    /**
-     * 获取是否第一次登录
+     * 获取创建时间
      *
-     * @return isFirstLogin - 是否第一次登录
+     * @return create_time - 创建时间
      */
-    public String getIsfirstlogin() {
-        return isfirstlogin;
+    public Date getCreateTime() {
+        return createTime;
     }
 
     /**
-     * 设置是否第一次登录
+     * 设置创建时间
      *
-     * @param isfirstlogin 是否第一次登录
+     * @param createTime 创建时间
      */
-    public void setIsfirstlogin(String isfirstlogin) {
-        this.isfirstlogin = isfirstlogin;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     /**
-     * @return username_skey
+     * 获取淘宝账号
+     *
+     * @return t_name - 淘宝账号
      */
-    public String getUsernameSkey() {
-        return usernameSkey;
+    public String gettName() {
+        return tName;
     }
 
     /**
-     * @param usernameSkey
+     * 设置淘宝账号
+     *
+     * @param tName 淘宝账号
      */
-    public void setUsernameSkey(String usernameSkey) {
-        this.usernameSkey = usernameSkey;
+    public void settName(String tName) {
+        this.tName = tName;
+    }
+
+    /**
+     * 获取京东账号
+     *
+     * @return j_name - 京东账号
+     */
+    public String getjName() {
+        return jName;
+    }
+
+    /**
+     * 设置京东账号
+     *
+     * @param jName 京东账号
+     */
+    public void setjName(String jName) {
+        this.jName = jName;
     }
 }

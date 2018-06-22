@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-@MapperScan(basePackages = "com.dream.dao,mapper")
+@MapperScan(basePackages = "com.dream.dao.mapper")
 @ComponentScan(basePackages = "com.dream.web")
 @ServletComponentScan(basePackages = {"com.dream.web.controller","com.dream.web.filter"})
 public class Application extends SpringBootServletInitializer {
