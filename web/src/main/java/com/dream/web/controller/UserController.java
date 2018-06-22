@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 public class UserController extends BaseController {
 
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String index(HttpServletRequest request) {
         User user = (User) request.getAttribute("user_");
 

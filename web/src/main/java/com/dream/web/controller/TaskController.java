@@ -2,7 +2,6 @@ package com.dream.web.controller;
 
 import com.dream.dao.domain.Task;
 import com.dream.dao.domain.User;
-import com.dream.dao.domain.Withdraw;
 import com.dream.dao.utils.Response;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,16 +16,16 @@ import java.util.List;
  * 任务大厅
  */
 @Controller
-@RequestMapping(value = "/task")
+@RequestMapping(value = "task")
 public class TaskController extends BaseController {
 
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String index(HttpServletRequest request) {
 
         Response<List<Task>> tasks = orderService.list();
         request.setAttribute("tasks", tasks);
-        return "/task";
+        return "task";
     }
 
     @RequestMapping(value = "/getByUserId", method = RequestMethod.POST)
