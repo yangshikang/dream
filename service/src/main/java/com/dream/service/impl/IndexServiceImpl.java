@@ -20,4 +20,10 @@ public class IndexServiceImpl extends BaseService implements IndexService {
     public Response register(String name, String phone, String qq, String password) {
         return null;
     }
+
+    @Override
+    public Response orderTaking(Integer orderId, Integer userId) {
+
+        return null;
+    }
 }

@@ -26,5 +26,12 @@ public interface IndexService {
      */
     Response register(String name, String phone, String qq, String password);
 
+    /**
+     * 接单
+     * @param orderId
+     * @param userId
+     * @return
+     */
+    Response orderTaking(Integer orderId, Integer userId);
 
 }

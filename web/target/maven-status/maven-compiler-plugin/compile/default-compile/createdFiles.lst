@@ -1,6 +1,0 @@
-com\dream\web\controller\BaseController.class
-com\dream\web\start\Application.class
-com\dream\web\config\DataSourceConfig.class
-com\dream\web\config\WebLogAspect.class
-com\dream\web\controller\IndexController.class
-com\dream\web\config\HttpConfig.class
